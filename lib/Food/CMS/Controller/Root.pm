@@ -33,11 +33,6 @@ sub index :Path :Args(0) {
     $c->stash(template => "hello.tt", who => "George");
 }
 
-sub echo :Path :Args(1) {
-    my ( $self, $c, $who ) = @_;
-    $c->stash(template => "hello.tt", who => $who);
-}
-
 =head2 default
 
 Standard 404 error page
