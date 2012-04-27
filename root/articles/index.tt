@@ -1,0 +1,15 @@
+[% FOR article IN articles %]
+	<article>
+		<h1>[% article.title %]</h1>
+		[% article.body %]
+		<form method="POST" action="/articles/delete/[% article.id %]">
+			<input type="submit" value="Delete">
+		</form>
+	</article>
+[% END %]
+<form method="POST" action="[% postback %]">
+	<input type="text" name="title">
+	<textarea name="body"></textarea>
+	<input type="submit" value="Create">
+</form>
+ 
